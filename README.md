@@ -54,6 +54,79 @@ The scanner now requires these additional packages:
 - `openpyxl` >= 3.0.0  
 - `tqdm` >= 4.60.0 (for progress bars)
 
+## Building Standalone Executables
+
+The credential scanner can be built into standalone executables that don't require Python to be installed on the target system.
+
+### Quick Build (Recommended)
+```bash
+# Install build dependencies
+pip install pyinstaller
+
+# Build executables for current platform
+python3 build_simple.py
+```
+
+This creates:
+- `dist/credential_scanner` - Command line version
+- `dist/credential_scanner_interactive` - Interactive version
+
+### Advanced Multi-Platform Build
+```bash
+# Build with comprehensive options
+python3 build_all_executables.py
+```
+
+### Manual Build
+```bash
+# Command line version
+pyinstaller --onefile --name credential_scanner --add-data "config.json:." credential_scanner.py
+
+# Interactive version  
+pyinstaller --onefile --name credential_scanner_interactive --add-data "config.json:." credential_scanner_interactive.py
+```
+
+### Build Requirements
+- Python 3.8+
+- PyInstaller (`pip install pyinstaller`)
+- All project dependencies installed (`pip install -r requirements.txt`)
+
+### Platform-Specific Notes
+
+**macOS:**
+```bash
+# For Apple Silicon (M1/M2)
+python3 build_simple.py
+# Creates ARM64 executables
+
+# For Intel Macs
+arch -x86_64 python3 build_simple.py
+# Creates x64 executables
+```
+
+**Windows:**
+```bash
+# On Windows with Python installed
+python build_simple.py
+# Creates .exe files in dist/ folder
+```
+
+**Linux:**
+```bash
+# On Linux
+python3 build_simple.py
+# Creates Linux executables
+```
+
+### Docker Build
+```bash
+# Build in Docker container for consistent results
+docker build -t credential-scanner .
+docker run -v /path/to/scan:/scan credential-scanner /scan
+```
+
+**For detailed build instructions and troubleshooting, see [BUILD.md](BUILD.md)**
+
 ## Usage
 
 ### Basic Usage
