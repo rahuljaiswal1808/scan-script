@@ -3,15 +3,14 @@
 ## Table of Contents
 1. [Quick Start](#quick-start)
 2. [Installation](#installation)
-3. [Building Executables](#building-executables)
-4. [Standalone Usage](#standalone-usage)
-5. [Command Line Usage](#command-line-usage)
-6. [CI/CD Integration](#cicd-integration)
-7. [Configuration Guide](#configuration-guide)
-8. [Output Formats](#output-formats)
-9. [Advanced Features](#advanced-features)
-10. [Troubleshooting](#troubleshooting)
-11. [Best Practices](#best-practices)
+3. [Standalone Usage](#standalone-usage)
+4. [Command Line Usage](#command-line-usage)
+5. [CI/CD Integration](#cicd-integration)
+6. [Configuration Guide](#configuration-guide)
+7. [Output Formats](#output-formats)
+8. [Advanced Features](#advanced-features)
+9. [Troubleshooting](#troubleshooting)
+10. [Best Practices](#best-practices)
 
 ---
 
