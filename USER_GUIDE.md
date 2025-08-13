@@ -19,7 +19,6 @@
 ### 🚀 Standalone Executable (Recommended for Desktop Use)
 ```bash
 # Run the standalone executable
-# Note: You can build standalone executable for desired platform by following instruction in [BUILD.md](BUILD.md)
 ./credential_scanner_interactive
 
 # Follow the interactive prompts to:
@@ -28,6 +27,9 @@
 # 3. Configure scan options
 # 4. Review results
 ```
+
+**Note: You can build a standalone executable for the desired platform.  
+For detailed build instructions and troubleshooting, see [BUILD.md](BUILD.md).**
 
 ### 📋 Command Line (For Scripts and Automation)
 ```bash
